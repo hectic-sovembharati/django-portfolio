@@ -1,1 +1,1 @@
-# djang-portfolio
+# django-portfolio
