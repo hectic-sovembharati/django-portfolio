@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sovem Jung Bharati</title>
+</head>
+<link rel="stylesheet" href={% static '/css/index.css' %}>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    {% for home in home_number  %}
+    <center>
+    <img src={{home.profile.url}} alt="sovem jung bharati">
+</center>
+    
+    <h1>{{home.name}}</h1>
+    <p>{{home.pa}}</p>
+    
+    <center>
+
+    <a href="about.html"><button class="abt"  class=" glow-button">About</button></a><br>
+    <button class="hello" onclick="hello()">@ Say Hello</button>
+</center>
+    <footer> {{home.foot}}</footer>
+    {% endfor %}
+</body>
+<script>
+    function hello(){
+        var name = prompt("Enter your name", "Enter name");
+        if (name != null) {
+            alert("Hello! "+ name + " Nice To Meet you ")
+        }
+    }
+</script>
+</html>
